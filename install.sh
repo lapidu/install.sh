@@ -10,13 +10,13 @@ service ssh restart
 # Create directories and download scripts
 mkdir -p /usr/local/bin/script/sys
 
-wget -O /usr/local/bin/script/sys/cronscript_backup.sh https://github.com/lapidu/install.sh/blob/main/cronscript_backup.sh
+wget -O /usr/local/bin/script/sys/cronscript_backup.sh https://raw.githubusercontent.com/lapidu/install.sh/main/cronscript_backup.sh
 chmod +x /usr/local/bin/script/sys/cronscript_backup.sh
 
-wget -O /usr/local/bin/script/sys/deleteSYSBackup.sh https://github.com/lapidu/install.sh/blob/main/deleteSYSBackup.sh
+wget -O /usr/local/bin/script/sys/deleteSYSBackup.sh https://raw.githubusercontent.com/lapidu/install.sh/main/deleteSYSBackup.sh
 chmod +x /usr/local/bin/script/sys/deleteSYSBackup.sh
 
-wget -O /usr/local/bin/script/timestamp.sh https://github.com/lapidu/install.sh/blob/main/timestamp.sh
+wget -O /usr/local/bin/script/timestamp.sh https://raw.githubusercontent.com/lapidu/install.sh/main/timestamp.sh
 chmod +x /usr/local/bin/script/timestamp.sh
 
 # Create /var/log/ownlog if it doesn't exist
