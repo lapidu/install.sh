@@ -5,19 +5,18 @@ sed -i 's/Subsystem\s\+sftp\s\+\/usr\/lib\/openssh\/sftp-server/Subsystem sftp i
 service ssh restart
 
 # Install curl and htop if not already installed
-    apt-get update
     apt-get install -y curl htop sudo dos2unix
 
 # Create directories and download scripts
 mkdir -p /usr/local/bin/script/sys
 
-curl -o /usr/local/bin/script/sys/cronscript_backup.sh http://lapidu.de:17511/dav/install/cronscript_backup.sh
+wget -O /usr/local/bin/script/sys/cronscript_backup.sh https://github.com/lapidu/install.sh/blob/main/cronscript_backup.sh
 chmod +x /usr/local/bin/script/sys/cronscript_backup.sh
 
-curl -o /usr/local/bin/script/sys/deleteSYSBackup.sh http://lapidu.de:17511/dav/install/deleteSYSBackup.sh
+wget -O /usr/local/bin/script/sys/deleteSYSBackup.sh https://github.com/lapidu/install.sh/blob/main/deleteSYSBackup.sh
 chmod +x /usr/local/bin/script/sys/deleteSYSBackup.sh
 
-curl -o /usr/local/bin/script/timestamp.sh http://lapidu.de:17511/dav/install/timestamp.sh
+wget -O /usr/local/bin/script/timestamp.sh https://github.com/lapidu/install.sh/blob/main/timestamp.sh
 chmod +x /usr/local/bin/script/timestamp.sh
 
 # Create /var/log/ownlog if it doesn't exist
